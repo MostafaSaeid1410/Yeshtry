@@ -31,7 +31,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.background-color-yellow {
+  background-color: #fff100;
+}
+.background-color-black {
+  background-color: #000;
+}
 .primary-navigation-container {
   background-color: #fff100;
 }
@@ -96,6 +101,9 @@ body {
 }
 
 /* call to action in header */
+.background-color-white {
+  background-color: #fff;
+}
 .cta {
   justify-content: space-between;
   color: #000;
