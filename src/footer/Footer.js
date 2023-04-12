@@ -1,15 +1,15 @@
 import React from 'react';
 import './Footer.css';
-import cashOnDelivery from '../icons/cashOnDelivery.png';
-import visa from '../icons/visa.png';
-import mastercard from '../icons/mastercard.png';
-import poweredby from '../icons/poweredby.png';
-import linkedin from '../icons/linkedin.png';
-import twitter from '../icons/twitter.png';
-import instagram from '../icons/instagram.png';
-import facebook from '../icons/facebook.png';
+import cashOnDelivery from '../../icons/cashOnDelivery.png';
+import visa from '../../icons/visa.png';
+import mastercard from '../../icons/mastercard.png';
+import poweredby from '../../icons/poweredby.png';
+import linkedin from '../../icons/linkedin.png';
+import twitter from '../../icons/twitter.png';
+import instagram from '../../icons//instagram.png';
+import facebook from '../../icons/facebook.png';
 
-import { submitIcon, yeshtryLogoH2 } from '../icons/footer-icons';
+import { submitIcon, yeshtryLogoH2 } from '../../icons/footer-icons';
 
 function Footer() {
   return (
