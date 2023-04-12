@@ -1,5 +1,5 @@
 import React from 'react';
-import { contactUs, findaStore, trackOrder } from '../icons/header-icons';
+import { contactUs, findaStore, trackOrder } from '../../icons/header-icons';
 import CtaShopNow from './components/CtaShopNow';
 import Logo from './components/Logo';
 import PrimaryNavigationAnchor from './components/PrimaryNavigationAnchor';

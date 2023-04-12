@@ -1,10 +1,11 @@
 import React from 'react';
+
 import {
   addidas,
   cartIcon,
   loginIcon,
   wishListIcon,
-} from '../icons/header-icons';
+} from '../../icons/header-icons';
 import SearchComponent from './components/SearchComponent';
 import Cta from './components/Cta';
 
