@@ -1,7 +1,6 @@
 html {
   font-size: 62.5%;
-  overflow: visible;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 * {
   margin: 0;

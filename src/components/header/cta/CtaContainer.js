@@ -10,11 +10,22 @@ import Cta from './components/Cta';
 import Overlay from '../../overLay/Overlay';
 
 function CtaContainer() {
-  const [showModal, setShowModal] = useState(false);
+  const [modal, setModal] = useState('');
+  const [cart, setCart] = useState('');
+  const [overflow, setOverflow] = useState('auto');
+
   const handleClick = (event) => {
     event.preventDefault();
-    setShowModal((prevState) => !prevState);
-    console.log('show');
+    setModal('show');
+    setCart('showCart');
+    setOverflow('hidden');
+  };
+
+  const handleClose = (event) => {
+    event.preventDefault();
+    setCart('');
+    setModal('');
+    setOverflow('auto');
   };
   return (
     <div className='background-color-white'>
@@ -25,13 +36,15 @@ function CtaContainer() {
           <div className='cta-btns-list flex-center'>
             <ul className='cta-btns-ul flex-center'>
               <div onClick={handleClick}>
-                <Cta icon={cartIcon} onClick={handleClick}>
-                  Cart
-                </Cta>
+                <Cta icon={cartIcon}>Cart</Cta>
               </div>
-              {showModal && <Overlay onClose={handleClick} />}
+              <Overlay
+                onClose={handleClose}
+                onShowModal={modal}
+                onShowCart={cart}
+                onOverFlow={overflow}
+              />
               <div>
-                {' '}
                 <Cta icon={wishListIcon}>Wishlist</Cta>
               </div>
               <div>

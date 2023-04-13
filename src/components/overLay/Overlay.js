@@ -2,20 +2,34 @@ import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './Overlay.scss';
 import shirtCart from '../../icons/shirtCart.png';
-const Overlay = ({ onClose }) => {
+import closeBtn from '../../icons/closebtn.png';
+
+const Overlay = ({ onClose, onShowModal, onShowCart, onOverFlow }) => {
   const removeoverFlowHiddden = function () {
-    document.documentElement.style.overflow = '';
+    document.documentElement.style.overflowY = `auto`;
   };
 
   useEffect(() => {
-    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overflowY = `${onOverFlow}`;
     return removeoverFlowHiddden;
-  }, []);
+  }, [onOverFlow]);
 
   return ReactDOM.createPortal(
-    <div className='overlay-container'>
+    <div className={`overlay-container ${onShowModal}`}>
       <div className='overlay' onClick={onClose}></div>
-      <div className='cart-details showModal'>
+      <div className={`cart-details ${onShowCart}`}>
+        <div className='close-btn-container'>
+          <button className='close-btn' onClick={onClose}>
+            <img
+              src={closeBtn}
+              alt='closeBtn'
+              width={'2.4rem'}
+              height={'2.4rem'}
+              className='close-btn-size'
+            />
+          </button>
+        </div>
+
         <h2 className='overlay-header'>My Cart</h2>
         <div className='grid-helper'>
           <h3 className='overlay-secondary-header'>Cart Summary</h3>

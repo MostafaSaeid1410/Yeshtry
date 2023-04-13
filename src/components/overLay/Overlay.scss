@@ -9,10 +9,47 @@
   overflow: hidden;
 }
 
+.overlay-container {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
 .grid-helper {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.6rem;
+}
+
+.close-btn-container {
+  position: relative;
+  margin-bottom: 2.4rem;
+}
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+.close-btn:hover {
+  cursor: pointer;
+}
+.close-btn-size {
+  height: 2rem;
+  width: 2rem;
 }
 .cart-details {
   position: absolute;
@@ -27,7 +64,7 @@
   pointer-events: none;
   visibility: hidden;
 }
-.showModal {
+.showCart {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -108,6 +145,10 @@
   border: none;
   background-color: #fff200;
 }
+.btn-remove:hover {
+  cursor: pointer;
+  background-color: #ccc200;
+}
 
 .total {
   font-size: 2.2rem;
@@ -128,12 +169,22 @@
   border: none;
   border-radius: 9999px;
 }
-
+.btn-decision:hover {
+  cursor: pointer;
+}
 .yellow {
   background-color: #fff200;
+}
+.yellow:hover {
+  background-color: #ccc200;
 }
 
 .violet {
   color: white;
   background: #542e90;
+}
+
+.violet:hover {
+  color: white;
+  background: #3b2065;
 }
