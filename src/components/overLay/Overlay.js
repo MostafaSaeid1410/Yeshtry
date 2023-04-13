@@ -4,20 +4,20 @@ import './Overlay.scss';
 import shirtCart from '../../icons/shirtCart.png';
 import closeBtn from '../../icons/closebtn.png';
 
-const Overlay = ({ onClose, onShowModal, onShowCart, onOverFlow }) => {
+const Overlay = ({ onClose }) => {
   const removeoverFlowHiddden = function () {
-    document.documentElement.style.overflowY = `auto`;
+    document.documentElement.style.overflow = '';
   };
 
   useEffect(() => {
-    document.documentElement.style.overflowY = `${onOverFlow}`;
+    document.documentElement.style.overflow = 'hidden';
     return removeoverFlowHiddden;
-  }, [onOverFlow]);
+  }, []);
 
   return ReactDOM.createPortal(
-    <div className={`overlay-container ${onShowModal}`}>
+    <div className='overlay-container'>
       <div className='overlay' onClick={onClose}></div>
-      <div className={`cart-details ${onShowCart}`}>
+      <div className='cart-details showModal'>
         <div className='close-btn-container'>
           <button className='close-btn' onClick={onClose}>
             <img
